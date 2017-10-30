@@ -103,7 +103,7 @@ for pet in query:
 #我们可以通过选择Pet和Person并且添加一个join来避免额外的查询。
 query = (Pet
          .select(Pet, Person)
-         .join(Person)
+         .join(Person)        #jion表格，很叼！
          .where(Pet.animal_type == 'cat'))
 for pet in query:
     print pet.name, pet.owner.name
